@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.springbootPlus</groupId>
-    <artifactId>spring-boot-ssm-starter</artifactId>
-    <version>1.5.13-SNAPSHOT</version>
+    <artifactId>spring-boot-starter-ssm</artifactId>
+    <version>1.5.13</version>
 
     <name>spring-boot-ssm-starter</name>
     <description>SIMPLE STARTER WITH SSM , MONGO , REDIS</description>
