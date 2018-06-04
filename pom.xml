@@ -6,16 +6,16 @@
 
     <groupId>com.github.springbootPlus</groupId>
     <artifactId>spring-boot-starter-ssm</artifactId>
-    <version>1.5.13</version>
+    <version>1.5.14.BUILD-SNAPSHOT</version>
 
-    <name>spring-boot-ssm-starter</name>
+    <name>spring-boot-starter-ssm</name>
     <description>SIMPLE STARTER WITH SSM , MONGO , REDIS</description>
-    <url>https://github.com/springbootPlus/spring-boot-ssm-starter</url>
+    <url>https://github.com/springbootPlus/spring-boot-starter-ssm</url>
 
     <licenses>
         <license>
             <name>The MIT License (MIT)</name>
-            <url>https://github.com/springbootPlus/spring-boot-ssm-starter/blob/master/LICENSE</url>
+            <url>https://github.com/springbootPlus/spring-boot-starter-ssm/blob/master/LICENSE</url>
         </license>
     </licenses>
 
@@ -27,9 +27,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git@github.com:springbootPlus/spring-boot-ssm-starter.git</connection>
-        <developerConnection>scm:git:git@github.com:springbootPlus/spring-boot-ssm-starter.git</developerConnection>
-        <url>git@github.com:springbootPlus/spring-boot-ssm-starter.git</url>
+        <connection>scm:git:git@github.com:springbootPlus/spring-boot-starter-ssm.git</connection>
+        <developerConnection>scm:git:git@github.com:springbootPlus/spring-boot-starter-ssm.git</developerConnection>
+        <url>git@github.com:springbootPlus/spring-boot-starter-ssm.git</url>
     </scm>
 
     <properties>
@@ -193,6 +193,22 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <!--
+
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-gpg-plugin</artifactId>
+                            <version>1.5</version>
+                            <executions>
+                                <execution>
+                                    <phase>verify</phase>
+                                    <goals>
+                                        <goal>sign</goal>
+                                    </goals>
+                                </execution>
+                            </executions>
+                        </plugin>
+            -->
 
             <!-- CLEAN插件 -->
             <plugin>
@@ -256,6 +272,7 @@
                 </configuration>
             </plugin>
 
+
         </plugins>
     </build>
 
@@ -272,6 +289,20 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-release-plugin</artifactId>
+                        <version>2.5.1</version>
+                    </plugin>
+                    <plugin>
+                        <artifactId>maven-scm-plugin</artifactId>
+                        <version>1.8.1</version>
+                        <configuration>
+                            <tag>${project.artifactId}-${project.version}</tag>
+                        </configuration>
+                    </plugin>
+                </plugins>
 
             </build>
             <distributionManagement>
