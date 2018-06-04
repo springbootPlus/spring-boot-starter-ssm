@@ -6,7 +6,7 @@
 
     <groupId>com.github.springbootPlus</groupId>
     <artifactId>spring-boot-starter-ssm</artifactId>
-    <version>1.5.14.BUILD-SNAPSHOT</version>
+    <version>1.5.14-SNAPSHOT</version>
 
     <name>spring-boot-starter-ssm</name>
     <description>SIMPLE STARTER WITH SSM , MONGO , REDIS</description>
